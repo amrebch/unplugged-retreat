@@ -128,7 +128,15 @@ textarea {
     font-size: .875em;
     line-height: 1.285;
    }
-   
+
+   img { 
+    width: 100%;
+  }
+  
+  figure {
+    margin: 0;
+  }
+
    address {
     font-style: normal;
    }
@@ -137,6 +145,7 @@ textarea {
     width: 90%;
     margin: 50px 0;
    }
+
 
 /*--------BASE HEADER - FOOTER STYLES---------*/
 header, 
@@ -158,6 +167,14 @@ header .content-wrapper{
   align-items: center;
   flex-flow: row wrap;
   margin: 0;
+}
+
+header figure {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
 }
 
 .header-divider {
@@ -229,6 +246,10 @@ footer .copyright {
 /* Hero Area */
 
 .hero-area {
+  background: url(../img/headerimg.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -280,6 +301,9 @@ input[type=button] {
 /* Features */
 
 .features {
+  background: url('../img/picnic.jpg');
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -329,58 +353,57 @@ input[type=button] {
    About Page
    ========================================================================== */
 
-.mission {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-  background-color: #527158;
-}
-
-.contact-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-  background-color: #527158;
-}
-
-.contact-content p {
-  margin: 0;
-}
+   .mission {
+    background-color: #527158;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  
+  .contact-section {
+    background-color: #2a423a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  
+  .contact-content p {
+    margin: 0;
+  }
 
 /* ==========================================================================
    FAQ Page
    ========================================================================== */
-
-.faq {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-  background-color: #527158;
-}
-
-.faq .content-wrapper {
-  margin: 50px 0 0 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-}
-
-.faq h2 {
-  margin-bottom: 40px;
-  line-height: 1;
-}
-
-.faq-content {
-  margin-bottom: 50px;
-}
-
-.faq-content h4 {
-line-height: 1.33;
-}
+   .faq {
+    background-color: #527158;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  
+  .faq .content-wrapper {
+    margin: 50px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  
+  .faq h2 {
+    margin-bottom: 40px;
+    line-height: 1;
+  }
+  
+  .faq-content {
+    margin-bottom: 50px;
+  }
+  
+  .faq-content h4 {
+    line-height: 1.333;
+  }
 
 /* ==========================================================================
    Helper classes
@@ -471,7 +494,7 @@ line-height: 1.33;
    ========================================================================== */
 
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width:768px) {
   /*TABLET STYLES*/
 
 /* General styles */
@@ -479,7 +502,8 @@ line-height: 1.33;
   max-width: 640px;
   margin: 100px 0;
 }
-    
+ 
+
 h2 {
   font-size: 2.25em;
   line-height: 1.333;
@@ -522,6 +546,10 @@ h3 {
 
   /* Hero Area */
  
+  .hero-area {
+    min-height: 600px;
+  }
+
   .hero-area h1 {
     font-size: 3em;
     line-height: 1;
@@ -563,6 +591,7 @@ h3 {
   }
 
   /* Reviews */
+  
   .reviews article {
     display: flex;
     justify-content: space-between;
@@ -572,8 +601,9 @@ h3 {
     width: 85%;
   }
 
+  .reviews article figure,
   .reviews article div {
-      width: 50%;         
+    width: 49%;
   }
 
   .reviews h3 {
@@ -619,7 +649,7 @@ h3 {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-top: 20px
+      padding-top: 20px;
     }
   
     .mission-content p {
@@ -635,7 +665,7 @@ h3 {
       justify-content: space-between;
       align-items: flex-start;
     }
-
+  
     .contact-content h4 {
       font-size: 1.5em;
     }
@@ -665,16 +695,15 @@ h3 {
 
 
 
+@media only screen and (min-width:1200px) {
+  /*Desktop styles here*/
 
-@media only screen and (min-width: 1200px) {
-  /*DESKTOP STYLES*/
-  
-header {
-  padding: 15px 0;
-}
+  header {
+    padding: 15px 0;
+  }
 
-  .content-wrapper{
-    width: 960px;
+  .content-wrapper {
+    max-width: 960px;
   }
 
   h2 {
@@ -690,79 +719,77 @@ header {
       font-size: 1.125em;
       line-height: 1.333;
   }
-
- 
-/* Hero */
-.hero-area h1 {
-   width: 60%;
+  /* Hero */
+  .hero-area h1 {
+    font-size: 3.75em;
+    width: 80%;
 }
 
-/* Aside */
-aside .content-wrapper {
-   justify-content: space-around;
-}
+  /* Aside */
+  aside .content-wrapper {
+    justify-content: space-around;
+  }
 
-aside .content-wrapper .form-description,
-aside .content-wrapper .form {
-   width: 30%;
-}
+  aside .content-wrapper .form-description,
+  aside .content-wrapper .form {
+    width: 30%;
+  }
 
-.form-description p {
-  font-size: 1.125em;
-}
-
-/* Features */
-.features h2 {
-   width: 90%;
-}
-
-.features article {
-   flex-basis: 33%;
-}
-
-/* Reviews */ 
-.reviews h2 {
-  padding-bottom: 50px;
-}
-
-.reviews article div {
-   width: 42%;
-}
-
-footer h4 {
-  font-size: 1.875em;
-}
-
-
-/* ==========================================================================
-About Page
-========================================================================== */
-.mission h2,
-.contact-section .content-wrapper h2 {
-   width: 95%; 
-   font-size: 3em;
-}
-
-.contact-content h4 {
-  font-size: 1.875em;
-}
-
-/* ==========================================================================
-FAQ Page
-========================================================================== */
-
-
-.faq h2 {
-   width: 100%;
-   font-size: 3em;
-}
-
-.faq h4,
-.faq p {
+  .form-description p {
     font-size: 1.125em;
-    line-height: 1;
-}
+  }
 
+  /* Features */
+
+
+  .features h2 {
+    width: 90%;
+  }
+
+  .features article {
+    flex-basis: 33%;
+  }
+  
+  /* Reviews */
+  .reviews article div {
+    width: 42%;
+  }
+
+  .reviews h2 {
+    padding-bottom: 50px;
+  }
+
+  footer h4 {
+    font-size: 1.875em;
+  }
+
+  /* ==========================================================================
+  About Page
+  ========================================================================== */
+
+  .mission h2,
+  .contact-section .content-wrapper h2 {
+      width: 95%;
+      font-size: 3em;
+  }
+
+  .contact-content h4 {
+    font-size: 1.875em;
+  }
+
+  /* ==========================================================================
+  FAQ Page
+  ========================================================================== */
+  .faq h2 {
+    width: 100%;
+    font-size: 3em;
+  }
+    
+  .faq h4,
+  .faq p {
+      font-size: 1.125em;
+      line-height: 1;
+  }
 }
 
 /* ==========================================================================
