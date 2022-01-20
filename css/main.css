@@ -531,6 +531,10 @@ input[type=button] {
 
 /* General styles */
 
+header nav ul li{
+  padding: 0 5px;
+}
+
 .content-wrapper {
   max-width: 640px;
   margin: 100px 0;
